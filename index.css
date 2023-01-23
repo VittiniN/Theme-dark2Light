@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 500ms ease-in-out; 
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+}
+
+
+ .logo{
+    justify-content: center;
+   
+    width: 400px;
+    position: relative;
+    top: 20px;
+    left: 280px;
+
+    
+
+} 
+
+h1{
+    
+   position: absolute;
+    top:400px;
+}
+
+
+p{
+    
+   text-align: center;
+   margin-bottom: 0;
+   padding: 0;
+   position: absolute;
+   top: 500px;
+   
+   
+}
+
+
+a{
+color: currentColor;
+text-decoration: none;
+}
+
+.navbar{
+    height: 70px;
+    width: 100%;
+    background: var(--bg-nav);
+    color: var(--text-light);
+   
+}
+
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%
+}
+
+
+header{
+    padding: 1em;
+    background-color: pink;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    height: 600px;
+   
+   position: relative;
+
+}
+
+
+
+
+
+
+
+.dropdown{
+    position: absolute;
+    width: 500px;
+    opacity: 0;
+    z-index: 2;
+    background: var(--bg-dropdown);
+    border-top: 2px solid var(--border-color);    
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem; 
+    margin-top: 2rem;
+   padding: 0.5rem;
+   transform: translateX(-40%);
+   transition: opacity .15s ease-out;
+}
+
+
+.has-dropdown:focus-within .dropdown{
+    opacity: 1 ;
+    pointer-events: all;
+}
+
+
+.dropdown-item a{
+    width: 100%;
+    height: 100%;
+    size: 0.7rem;
+    padding-left: 10px;
+    font-weight: bold;
+
+}
+
+.dropdown-item a::before{
+    content: '  ';
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}
+
+
+ 
+/*themes */ 
+
+:root {
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #fff565;
+}
+
+.light {
+    --bg: var(--gray0);
+    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+    --bg-dropdown: var(--gray0);
+    --text: var(--gray6);
+    --border-color: var(--blue);
+    --bg-solar: var(--yellow);
+}
+  
+
+.dark {
+    --bg: var(--gray5);
+    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    --bg-dropdown: var(--gray6);
+    --text: var(--gray0);
+    --border-color: var(--purple);
+    --bg-solar: var(--blue);
+}
+
